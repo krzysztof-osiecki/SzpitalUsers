@@ -2,24 +2,32 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://java.sun.com/jsf/html">
+      xmlns:h="http://java.sun.com/jsf/html" xmlns:p="http://java.sun.com/jsf/html">
 <h:head>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <h:outputScript library="default" name="bootstrap/js/jquery.min.js"/>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <h:outputScript library="default" name="bootstrap/js/bootstrap.min.js"/>
+    <!--<link href="resources/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>-->
+    <h:outputStylesheet library="default" name="bootstrap/css/bootstrap.min.css"/>
     <title>Login</title>
 </h:head>
 <h:body>
     <h:form>
         <h3>Szpital Użytkownicy</h3>
-        <h:outputText value="Nazwa użytkownika"/>
-        <h:inputText id="username" value="#{loginView.user}"/>
-        <h:message for="username"/>
-        <br/><br/>
-
-        <h:outputText value="Hasło"/>
-        <h:inputSecret id="password" value="#{loginView.pass}"/>
-        <h:message for="password"/>
-        <br/><br/>
-
-        <h:commandButton action="#{loginView.validateUsernamePassword}" value="Login"/>
+        <p:panelGrid>
+            <p:panelGroup>
+                <h:outputText value="Nazwa użytkownika"/>
+                <h:inputText id="username" value="#{loginView.user}" styleClass="form-control"/>
+                <h:message for="username"/>
+            </p:panelGroup>
+            <p:panelGroup>
+                <h:outputText value="Hasło"/>
+                <h:inputSecret id="password" value="#{loginView.pass}" styleClass="form-control"/>
+                <h:message for="password"/>
+            </p:panelGroup>
+        </p:panelGrid>
+        <h:commandButton action="#{loginView.validateUsernamePassword}" styleClass="btn btn-primary" style="margin-top: 20px" value="Login"/>
     </h:form>
 </h:body>
 </html>
