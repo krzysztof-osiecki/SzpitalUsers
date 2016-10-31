@@ -4,11 +4,17 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:h="http://java.sun.com/jsf/html">
 <h:head>
-	<title>Facelet Title</title>
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<h:outputScript library="default" name="bootstrap/js/jquery.min.js"/>
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<h:outputScript library="default" name="bootstrap/js/bootstrap.min.js"/>
+	<!--<link href="resources/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>-->
+	<h:outputStylesheet library="default" name="bootstrap/css/bootstrap.min.css"/>
+	<title>Admin</title>
 </h:head>
 <h:body>
 	<h:form>
-		<p>Welcome #{loginView.user}</p>
+		<p>Welcome #{loginView.userContext.userLogin}</p>
 		<h:commandLink action="#{loginView.logout}" value="Wyloguj"/>
 	</h:form>
 </h:body>
