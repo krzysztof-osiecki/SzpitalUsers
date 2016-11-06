@@ -1,41 +1,45 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html
-        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:p="http://java.sun.com/jsf/html"
-      xmlns:h="http://xmlns.jcp.org/jsf/html" xml:lang="en" lang="en">
-<h:head>
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <h:outputScript library="default" name="bootstrap/js/jquery.min.js"/>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <h:outputScript library="default" name="bootstrap/js/bootstrap.min.js"/>
-    <!--<link href="resources/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>-->
-    <h:outputStylesheet library="default" name="bootstrap/css/bootstrap.min.css"/>
-    <title>profile</title>
-</h:head>
-<body>
-<h3>Profil użytkownika</h3>
-<p:panelGrid>
-    <p:panelGroup>
-        <p:outputLabel value="Imię"/>
-        <p:outputLabel value="#{profileView.userContext.userName}"/>
-    </p:panelGroup>
-    <p:panelGroup>
-        <p:outputLabel value="Nazwisko"/>
-        <p:outputLabel value="#{profileView.userContext.userLastName}"/>
-    </p:panelGroup>
-    <p:panelGroup>
-        <p:outputLabel value="Wiek"/>
-        <p:outputLabel value="#{profileView.userContext.userAge}"/>
-    </p:panelGroup>
-    <p:panelGroup>
-        <p:outputLabel value="Data urodzenia"/>
-        <p:outputLabel value="#{profileView.userContext.userBirthDate}"/>
-    </p:panelGroup>
-    <p:panelGroup>
-        <p:outputLabel value="Miasto"/>
-        <p:outputLabel value="#{profileView.userContext.userCity}"/>
-    </p:panelGroup>
-</p:panelGrid>
-</body>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html" xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://java.sun.com/jsf/html">
+<ui:composition template="template.xhtml">
+    <ui:define name="content">
+        <h3>Profil użytkownika</h3>
+        <p:panelGrid>
+            <p:panelGroup>
+                <p:outputLabel value="Imię: "/>
+                <p:outputLabel value="#{profileView.userContext.userName}"/>
+            </p:panelGroup>
+            <p:panelGroup>
+                <p:outputLabel value="Nazwisko: "/>
+                <p:outputLabel value="#{profileView.userContext.userLastName}"/>
+            </p:panelGroup>
+            <p:panelGroup>
+                <p:outputLabel value="Wiek: "/>
+                <p:outputLabel value="#{profileView.userContext.userAge}"/>
+            </p:panelGroup>
+            <p:panelGroup>
+                <p:outputLabel value="Data urodzenia: "/>
+                <p:outputLabel value="#{profileView.userContext.userBirthDate}"/>
+            </p:panelGroup>
+            <p:panelGroup>
+                <p:outputLabel value="Miasto: "/>
+                <p:outputLabel value="#{profileView.userContext.userCity}"/>
+            </p:panelGroup>
+        </p:panelGrid>
+    </ui:define>
+
+    <ui:define name="menu">
+        <ul>
+            <li>
+                <h:commandLink action="admin" value="Admin"/>
+            </li>
+            <li>B</li>
+            <li>C</li>
+            <li>D</li>
+        </ul>
+    </ui:define>
+</ui:composition>
 </html>

@@ -1,0 +1,13 @@
+.panel-footer {
+    clear: both;
+}
+
+.navbar {
+    float: left;
+    width: 10%;
+}
+
+.content {
+    float: right;
+    width: 90%;
+}
