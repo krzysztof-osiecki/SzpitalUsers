@@ -22,13 +22,15 @@ public class LoginView implements Serializable {
 
   @Inject
   private UserContext userContext;
+  @Inject
+  private AuthService authService;
   private String pass;
   private String msg;
   private String user;
 
   //validate login
   public String validateUsernamePassword() {
-    boolean valid = AuthService.validate(user, pass);
+    boolean valid = authService.validate(user, pass);
     if (valid) {
       userContext.initialize(user);
       HttpSession session = SessionUtils.getSession();

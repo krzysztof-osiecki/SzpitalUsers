@@ -1,41 +1,51 @@
 package szpital.users.services;
 
-import javaslang.Tuple;
-import javaslang.Tuple2;
+import szpital.users.data.User;
 
-import java.util.Arrays;
-import java.util.List;
+import javax.ejb.Stateless;
+import javax.persistence.EntityManager;
+import javax.persistence.NoResultException;
+import javax.persistence.PersistenceContext;
+import java.math.BigInteger;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 
+@Stateless
 public class AuthService {
 
-  private static List<Tuple2<String, String>> USERS = Arrays.asList(Tuple.of("admin", "xx"), Tuple.of("user1", "yyy"));
+  @PersistenceContext(unitName = "medsystem")
+  private EntityManager em;
 
-
-  public static boolean validate(String user, String password) {
-    return USERS.contains(Tuple.of(user, password));
+  public boolean validate(String user, String password) {
+    String hash = calculateMD5(user, password);
+    try {
+      User singleResult =
+          em.createNamedQuery("User.findWithHash", User.class)
+              .setParameter("hash", hash)
+              .setParameter("login", user)
+              .getSingleResult();
+      return singleResult.getLogin().equals(user);
+    } catch (NoResultException ex) {
+      return false;
+    }
   }
 
-//	public static boolean validate(String user, String password) {
-//		Connection con = null;
-//		PreparedStatement ps = null;
-//
-//		try {
-//			con = DataConnect.getConnection();
-//			ps = con.prepareStatement("Select uname, password from Users where uname = ? and password = ?");
-//			ps.setString(1, user);
-//			ps.setString(2, password);
-//
-//			ResultSet rs = ps.executeQuery();
-//
-//			if (rs.next()) {
-//				return true;
-//			}
-//		} catch (SQLException ex) {
-//			System.out.println("Login error -->" + ex.getMessage());
-//			return false;
-//		} finally {
-//			DataConnect.close(con);
-//		}
-//		return false;
-//	}
+  private String calculateMD5(String user, String password) {
+    try {
+      String plaintext = "DR" + user + "GRZEGORZ" + password + "WOJCIK";
+      MessageDigest m;
+      m = MessageDigest.getInstance("MD5");
+      m.reset();
+      m.update(plaintext.getBytes());
+      byte[] digest = m.digest();
+      BigInteger bigInt = new BigInteger(1, digest);
+      String hashtext = bigInt.toString(16);
+      while (hashtext.length() < 32) {
+        hashtext = "0" + hashtext;
+      }
+      return hashtext;
+    } catch (NoSuchAlgorithmException e) {
+      return "";
+    }
+  }
 }
