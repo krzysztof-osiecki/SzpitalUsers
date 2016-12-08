@@ -16,7 +16,5 @@ import java.io.Serializable;
 public class ProfileView implements Serializable {
   @Inject
   private UserContext userContext;
-  @Inject
-  private UserRepository userRepository;
 
 }
