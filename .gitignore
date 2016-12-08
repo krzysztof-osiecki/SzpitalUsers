@@ -1,3 +1,7 @@
 /target/*
 .idea/*
 *.iml
+glassfish4/glassfish/domains/domain1/applications/*
+glassfish4/glassfish/domains/domain1/osgi-cache/*
+glassfish4/glassfish/domains/domain1/logs/*
+glassfish4/glassfish/domains/domain1/generated/*
