@@ -8,9 +8,9 @@
         <view-id value="/login.xhtml" />
     </url-mapping>
 
-    <url-mapping id="admin">
-        <pattern value="/admin" />
-        <view-id value="/admin.xhtml" />
+    <url-mapping id="home">
+        <pattern value="/home" />
+        <view-id value="/home.xhtml" />
     </url-mapping>
 
     <url-mapping id="profile">

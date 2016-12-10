@@ -29,16 +29,23 @@
                 <p:outputLabel value="#{profileView.userContext.userCity}"/>
             </p:panelGroup>
         </p:panelGrid>
+
+        <h:panelGrid columns="2">
+            <p:outputLabel>Stare hasło</p:outputLabel>
+            <h:inputSecret value="#{profileView.oldPass}"/>
+            <p:outputLabel>Nowe hasło</p:outputLabel>
+            <h:inputSecret value="#{profileView.newPass}"/>
+            <p:outputLabel>Powtórz nowe hasło</p:outputLabel>
+            <h:inputSecret value="#{profileView.confirmNewPass}"/>
+        </h:panelGrid>
+        <h:commandButton value="Zmień hasło" action="#{profileView.executeChangePass}"/>
     </ui:define>
 
     <ui:define name="menu">
         <ul>
             <li>
-                <h:commandLink action="admin" value="Admin"/>
+                <h:commandLink action="home" value="Home"/>
             </li>
-            <li>B</li>
-            <li>C</li>
-            <li>D</li>
         </ul>
     </ui:define>
 </ui:composition>

@@ -2,6 +2,7 @@ package szpital.users.session;
 
 import lombok.Getter;
 import lombok.Setter;
+import szpital.users.data.User;
 
 import javax.enterprise.context.SessionScoped;
 import java.io.Serializable;
@@ -11,6 +12,7 @@ import java.util.Date;
 @Getter
 @Setter
 public class UserContext implements Serializable {
+  private User user;
   private String userLogin;
   private String userName;
   private String userLastName;
@@ -19,12 +21,13 @@ public class UserContext implements Serializable {
   private Date userBirthDate;
   private boolean authenticated;
 
-  public void initialize(String userLogin) {
-    this.userLogin = userLogin;
-    this.userName = "Karolina";
-    this.userLastName = "Cieślik";
+  public void initialize(User user) {
+    this.user = user;
+    this.userLogin = user.getLogin();
+    this.userName = user.getName();
+    this.userLastName = user.getLastName();
     this.userCity = "Lublin";
-    this.userBirthDate = new Date();
+    this.userBirthDate = user.getBirthday();
     this.userAge = 23;
     this.authenticated = true;
   }

@@ -2,7 +2,9 @@ package szpital.users.beans;
 
 import lombok.Getter;
 import lombok.Setter;
+import szpital.users.data.User;
 import szpital.users.services.AuthService;
+import szpital.users.services.UserService;
 import szpital.users.session.UserContext;
 import szpital.users.util.SessionUtils;
 
@@ -24,6 +26,8 @@ public class LoginView implements Serializable {
   private UserContext userContext;
   @Inject
   private AuthService authService;
+  @Inject
+  private UserService userService;
   private String pass;
   private String msg;
   private String user;
@@ -32,10 +36,11 @@ public class LoginView implements Serializable {
   public String validateUsernamePassword() {
     boolean valid = authService.validate(user, pass);
     if (valid) {
+      User user = userService.getUser(this.user);
       userContext.initialize(user);
       HttpSession session = SessionUtils.getSession();
       session.setAttribute("user", userContext);
-      return "admin?faces-redirect=true";
+      return "home?faces-redirect=true";
     } else {
       FacesContext.getCurrentInstance().addMessage(
           null,

@@ -30,7 +30,7 @@ public class AuthService {
     }
   }
 
-  private String calculateMD5(String user, String password) {
+  public String calculateMD5(String user, String password) {
     try {
       String plaintext = "DR" + user + "GRZEGORZ" + password + "WOJCIK";
       MessageDigest m;

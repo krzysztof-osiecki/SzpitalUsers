@@ -53,7 +53,6 @@
   <servers>
     <server config-ref="server-config" name="server">
       <application-ref ref="__admingui" virtual-servers="__asadmin"></application-ref>
-      <application-ref ref="SzpitalUsers" virtual-servers="server"></application-ref>
       <resource-ref ref="jdbc/__TimerPool"></resource-ref>
       <resource-ref ref="jdbc/__default"></resource-ref>
       <resource-ref ref="jms/__defaultConnectionFactory"></resource-ref>
@@ -459,20 +458,6 @@
       <property name="defaultAppName" value="game-management-15014414688861764430.0-SNAPSHOT"></property>
       <module name="game-management-1.0-SNAPSHOT">
         <engine sniffer="security"></engine>
-        <engine sniffer="web"></engine>
-      </module>
-    </application>
-    <application context-root="/SzpitalUsers" object-type="user" name="SzpitalUsers" location="${com.sun.aas.instanceRootURI}/applications/SzpitalUsers/">
-      <property name="archiveType" value="war"></property>
-      <property name="appLocation" value="${com.sun.aas.instanceRootURI}/applications/__internal/SzpitalUsers/SzpitalUsers.war"></property>
-      <property name="org.glassfish.ejb.container.application_unique_id" value="97074454112763904"></property>
-      <property name="org.glassfish.persistence.app_name_property" value="SzpitalUsers"></property>
-      <property name="defaultAppName" value="SzpitalUsers"></property>
-      <module name="SzpitalUsers">
-        <engine sniffer="ejb"></engine>
-        <engine sniffer="security"></engine>
-        <engine sniffer="weld"></engine>
-        <engine sniffer="jpa"></engine>
         <engine sniffer="web"></engine>
       </module>
     </application>
