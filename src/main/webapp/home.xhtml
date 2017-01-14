@@ -7,16 +7,16 @@
 <ui:composition template="template.xhtml">
     <ui:define name="content">
         <p>Welcome #{loginView.userContext.userLogin}</p>
-        <h:commandLink action="#{loginView.logout}" value="Wyloguj"/>
+        <h:commandLink action="#{loginView.logout}" value="#{msg.LOGOUT}"/>
     </ui:define>
 
     <ui:define name="menu">
         <ul>
             <li>
-                <h:commandLink action="profile" value="Profil"/>
+                <h:commandLink action="profile" value="#{msg.PROFILE}"/>
             </li>
             <c:if test="#{loginView.userContext.user.admin}">
-                <li><h:commandLink action="createUser" value="Utwórz użytkownika"/></li>
+                <li><h:commandLink action="createUser" value="#{msg.CREATE_USER}"/></li>
             </c:if>
             <li>C</li>
             <li>D</li>

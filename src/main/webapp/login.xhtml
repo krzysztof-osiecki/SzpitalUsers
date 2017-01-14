@@ -17,12 +17,12 @@
         <h3>Szpital Użytkownicy</h3>
         <p:panelGrid>
             <p:panelGroup>
-                <h:outputText value="Nazwa użytkownika"/>
+                <h:outputText value="#{msg.USER_NAME}"/>
                 <h:inputText id="username" value="#{loginView.user}" styleClass="form-control"/>
                 <h:message for="username"/>
             </p:panelGroup>
             <p:panelGroup>
-                <h:outputText value="Hasło"/>
+                <h:outputText value="#{msg.PASSWORD}"/>
                 <h:inputSecret id="password" value="#{loginView.pass}" styleClass="form-control"/>
                 <h:message for="password"/>
             </p:panelGroup>

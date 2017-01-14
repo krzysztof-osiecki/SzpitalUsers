@@ -36,16 +36,16 @@
             </p:selectOneButton>
 
         </p:panelGrid>
-        <h:commandButton value="Utwórz" action="#{createUserView.saveUser}"/>
+        <h:commandButton value="#{msg.CREATE}" action="#{createUserView.saveUser}"/>
     </ui:define>
 
     <ui:define name="menu">
         <ul>
             <li>
-                <h:commandLink action="home" value="Home"/>
+                <h:commandLink action="home" value="#{msg.HOME}"/>
             </li>
             <li>
-                <h:commandLink action="profile" value="Profil"/>
+                <h:commandLink action="profile" value="#{msg.PROFILE}"/>
             </li>
 
         </ul>

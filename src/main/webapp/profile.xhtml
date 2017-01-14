@@ -6,45 +6,45 @@
       xmlns:p="http://java.sun.com/jsf/html">
 <ui:composition template="template.xhtml">
     <ui:define name="content">
-        <h3>Profil użytkownika</h3>
+        <h3>#{msg.PROFILE}</h3>
         <p:panelGrid>
             <p:panelGroup>
-                <p:outputLabel value="Imię: "/>
+                <p:outputLabel value="#{msg.NAME}: "/>
                 <p:outputLabel value="#{profileView.userContext.userName}"/>
             </p:panelGroup>
             <p:panelGroup>
-                <p:outputLabel value="Nazwisko: "/>
+                <p:outputLabel value="#{msg.LAST_NAME}: "/>
                 <p:outputLabel value="#{profileView.userContext.userLastName}"/>
             </p:panelGroup>
             <p:panelGroup>
-                <p:outputLabel value="Wiek: "/>
+                <p:outputLabel value="#{msg.AGE}: "/>
                 <p:outputLabel value="#{profileView.userContext.userAge}"/>
             </p:panelGroup>
             <p:panelGroup>
-                <p:outputLabel value="Data urodzenia: "/>
+                <p:outputLabel value="#{msg.BIRTHDAY}: "/>
                 <p:outputLabel value="#{profileView.userContext.userBirthDate}"/>
             </p:panelGroup>
             <p:panelGroup>
-                <p:outputLabel value="Miasto: "/>
+                <p:outputLabel value="#{msg.CITY}: "/>
                 <p:outputLabel value="#{profileView.userContext.userCity}"/>
             </p:panelGroup>
         </p:panelGrid>
 
         <h:panelGrid columns="2">
-            <p:outputLabel>Stare hasło</p:outputLabel>
+            <p:outputLabel>#{msg.OLD_PASS}</p:outputLabel>
             <h:inputSecret value="#{profileView.oldPass}"/>
-            <p:outputLabel>Nowe hasło</p:outputLabel>
+            <p:outputLabel>#{msg.NEW_PASS}</p:outputLabel>
             <h:inputSecret value="#{profileView.newPass}"/>
-            <p:outputLabel>Powtórz nowe hasło</p:outputLabel>
+            <p:outputLabel>#{msg.REPEAT_NEW_PASS}</p:outputLabel>
             <h:inputSecret value="#{profileView.confirmNewPass}"/>
         </h:panelGrid>
-        <h:commandButton value="Zmień hasło" action="#{profileView.executeChangePass}"/>
+        <h:commandButton value="#{msg.CHANGE_PASS}" action="#{profileView.executeChangePass}"/>
     </ui:define>
 
     <ui:define name="menu">
         <ul>
             <li>
-                <h:commandLink action="home" value="Home"/>
+                <h:commandLink action="home" value="#{msg.HOME}"/>
             </li>
         </ul>
     </ui:define>
