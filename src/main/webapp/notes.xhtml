@@ -3,11 +3,12 @@
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://java.sun.com/jsf/html" xmlns:ui="http://java.sun.com/jsf/facelets"
-      xmlns:c="http://java.sun.com/jsp/jstl/core">
+      xmlns:p="http://java.sun.com/jsf/html">
 <ui:composition template="template.xhtml">
     <ui:define name="content">
-        <p>Welcome #{loginView.userContext.userLogin}</p>
-        <h:commandLink action="#{loginView.logout}" value="#{msg.LOGOUT}"/>
+        <h3>#{msg.NOTES}</h3>
+        <p:inputTextarea styleClass="text_area" value="#{notesView.userContext.notes}"/>
+        <h:commandButton value="#{msg.SAVE}" action="#{notesView.executeSaveNotes}"/>
     </ui:define>
 
     <ui:define name="menu">
@@ -15,14 +16,10 @@
             <li>
                 <h:commandLink action="profile" value="#{msg.PROFILE}"/>
             </li>
-            <c:if test="#{loginView.userContext.user.admin}">
-                <li><h:commandLink action="createUser" value="#{msg.CREATE_USER}"/></li>
-            </c:if>
             <li>
-                <h:commandLink action="notes" value="#{msg.NOTES}"/>
+                <h:commandLink action="home" value="#{msg.HOME}"/>
             </li>
         </ul>
     </ui:define>
 </ui:composition>
 </html>
-

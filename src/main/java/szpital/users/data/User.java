@@ -51,6 +51,8 @@ public class User implements Serializable {
   String lastName;
   @Column(name = "birthday")
   Date birthday;
+  @Column(name = "notes")
+  String notes;
 
   public boolean isAdmin() {
     return role != null && role == UserRole.ADMINISTRATOR;

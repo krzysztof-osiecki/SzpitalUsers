@@ -6,6 +6,8 @@ import szpital.users.data.User;
 
 import javax.enterprise.context.SessionScoped;
 import java.io.Serializable;
+import java.time.LocalDate;
+import java.time.Period;
 import java.util.Date;
 
 @SessionScoped
@@ -20,6 +22,7 @@ public class UserContext implements Serializable {
   private int userAge;
   private Date userBirthDate;
   private boolean authenticated;
+  private String notes;
 
   public void initialize(User user) {
     this.user = user;
@@ -28,7 +31,8 @@ public class UserContext implements Serializable {
     this.userLastName = user.getLastName();
     this.userCity = "Lublin";
     this.userBirthDate = user.getBirthday();
-    this.userAge = 23;
+    this.userAge = Period.between(user.getBirthday().toLocalDate(), LocalDate.now()).getYears();;
     this.authenticated = true;
+    this.notes = user.getNotes();
   }
 }
