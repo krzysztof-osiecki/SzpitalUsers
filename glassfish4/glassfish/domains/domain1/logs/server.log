@@ -5030,3 +5030,147 @@ com.sun.enterprise.admin.cli.AdminMain]]
 [2017-01-14T19:56:10.569+0100] [glassfish 4.1] [INFO] [] [org.eclipse.persistence.session.file:/E:/SzpitalUsers/glassfish4/glassfish/domains/domain1/applications/SzpitalUsers/WEB-INF/classes/_medsystem] [tid: _ThreadID=53 _ThreadName=admin-listener(3)] [timeMillis: 1484420170569] [levelValue: 800] [[
   EclipseLink, version: Eclipse Persistence Services - 2.5.2.v20140319-9ad6abd]]
 
+[2017-01-14T19:56:12.687+0100] [glassfish 4.1] [INFO] [] [org.eclipse.persistence.session.file:/E:/SzpitalUsers/glassfish4/glassfish/domains/domain1/applications/SzpitalUsers/WEB-INF/classes/_medsystem.connection] [tid: _ThreadID=53 _ThreadName=admin-listener(3)] [timeMillis: 1484420172687] [levelValue: 800] [[
+  file:/E:/SzpitalUsers/glassfish4/glassfish/domains/domain1/applications/SzpitalUsers/WEB-INF/classes/_medsystem login successful]]
+
+[2017-01-14T19:56:12.778+0100] [glassfish 4.1] [INFO] [AS-EJB-00054] [javax.enterprise.ejb.container] [tid: _ThreadID=53 _ThreadName=admin-listener(3)] [timeMillis: 1484420172778] [levelValue: 800] [[
+  Portable JNDI names for EJB UserService: [java:global/SzpitalUsers/UserService, java:global/SzpitalUsers/UserService!szpital.users.services.UserService]]]
+
+[2017-01-14T19:56:12.827+0100] [glassfish 4.1] [INFO] [AS-EJB-00054] [javax.enterprise.ejb.container] [tid: _ThreadID=53 _ThreadName=admin-listener(3)] [timeMillis: 1484420172827] [levelValue: 800] [[
+  Portable JNDI names for EJB AuthService: [java:global/SzpitalUsers/AuthService!szpital.users.services.AuthService, java:global/SzpitalUsers/AuthService]]]
+
+[2017-01-14T19:56:12.847+0100] [glassfish 4.1] [INFO] [] [org.jboss.weld.Version] [tid: _ThreadID=53 _ThreadName=admin-listener(3)] [timeMillis: 1484420172847] [levelValue: 800] [[
+  WELD-000900: 2.2.2 (Final)]]
+
+[2017-01-14T19:56:13.302+0100] [glassfish 4.1] [WARN] [] [org.jboss.weld.Interceptor] [tid: _ThreadID=53 _ThreadName=admin-listener(3)] [timeMillis: 1484420173302] [levelValue: 900] [[
+  WELD-001700: Interceptor annotation class javax.ejb.PostActivate not found, interception based on it is not enabled]]
+
+[2017-01-14T19:56:13.302+0100] [glassfish 4.1] [WARN] [] [org.jboss.weld.Interceptor] [tid: _ThreadID=53 _ThreadName=admin-listener(3)] [timeMillis: 1484420173302] [levelValue: 900] [[
+  WELD-001700: Interceptor annotation class javax.ejb.PrePassivate not found, interception based on it is not enabled]]
+
+[2017-01-14T19:56:13.523+0100] [glassfish 4.1] [WARN] [] [org.jboss.weld.Event] [tid: _ThreadID=53 _ThreadName=admin-listener(3)] [timeMillis: 1484420173523] [levelValue: 900] [[
+  WELD-000411: Observer method [BackedAnnotatedMethod] public org.glassfish.jms.injection.JMSCDIExtension.processAnnotatedType(@Observes ProcessAnnotatedType<Object>) receives events for all annotated types. Consider restricting events using @WithAnnotations or a generic type with bounds.]]
+
+[2017-01-14T19:56:13.528+0100] [glassfish 4.1] [WARN] [] [org.jboss.weld.Event] [tid: _ThreadID=53 _ThreadName=admin-listener(3)] [timeMillis: 1484420173528] [levelValue: 900] [[
+  WELD-000411: Observer method [BackedAnnotatedMethod] org.glassfish.sse.impl.ServerSentEventCdiExtension.processAnnotatedType(@Observes ProcessAnnotatedType<Object>, BeanManager) receives events for all annotated types. Consider restricting events using @WithAnnotations or a generic type with bounds.]]
+
+[2017-01-14T19:56:13.534+0100] [glassfish 4.1] [WARN] [] [org.jboss.weld.Event] [tid: _ThreadID=53 _ThreadName=admin-listener(3)] [timeMillis: 1484420173534] [levelValue: 900] [[
+  WELD-000411: Observer method [BackedAnnotatedMethod] private org.glassfish.jersey.gf.cdi.internal.CdiComponentProvider.processAnnotatedType(@Observes ProcessAnnotatedType<Object>) receives events for all annotated types. Consider restricting events using @WithAnnotations or a generic type with bounds.]]
+
+[2017-01-14T19:56:14.593+0100] [glassfish 4.1] [INFO] [jsf.config.listener.version] [javax.enterprise.resource.webcontainer.jsf.config] [tid: _ThreadID=53 _ThreadName=admin-listener(3)] [timeMillis: 1484420174593] [levelValue: 800] [[
+  Initializing Mojarra 2.2.7 ( 20140610-1547 https://svn.java.net/svn/mojarra~svn/tags/2.2.7@13362) for context '/SzpitalUsers']]
+
+[2017-01-14T19:56:15.406+0100] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=53 _ThreadName=admin-listener(3)] [timeMillis: 1484420175406] [levelValue: 800] [[
+  RewritePhaseListener starting up.]]
+
+[2017-01-14T19:56:16.317+0100] [glassfish 4.1] [INFO] [] [javax.enterprise.resource.webcontainer.jsf.config] [tid: _ThreadID=53 _ThreadName=admin-listener(3)] [timeMillis: 1484420176317] [levelValue: 800] [[
+  Monitoring jndi:/server/SzpitalUsers/WEB-INF/faces-config.xml for modifications]]
+
+[2017-01-14T19:56:16.434+0100] [glassfish 4.1] [INFO] [] [org.primefaces.webapp.PostConstructApplicationEventListener] [tid: _ThreadID=53 _ThreadName=admin-listener(3)] [timeMillis: 1484420176434] [levelValue: 800] [[
+  Running on PrimeFaces 5.2]]
+
+[2017-01-14T19:56:16.435+0100] [glassfish 4.1] [INFO] [] [org.primefaces.webapp.PostConstructApplicationEventListener] [tid: _ThreadID=53 _ThreadName=admin-listener(3)] [timeMillis: 1484420176435] [levelValue: 800] [[
+  Running on PrimeFaces 5.2]]
+
+[2017-01-14T19:56:16.881+0100] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=53 _ThreadName=admin-listener(3)] [timeMillis: 1484420176881] [levelValue: 800] [[
+  RewriteFilter starting up...]]
+
+[2017-01-14T19:56:16.951+0100] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=53 _ThreadName=admin-listener(3)] [timeMillis: 1484420176951] [levelValue: 800] [[
+  Loaded [4] org.ocpsoft.rewrite.servlet.spi.RewriteLifecycleListener [org.ocpsoft.rewrite.prettyfaces.PrettyFacesRewriteLifecycleListener<-100>, org.ocpsoft.rewrite.faces.FacesRewriteLifecycleListener<0>, org.ocpsoft.rewrite.servlet.config.lifecycle.JoinRewriteLifecycleListener<2147483647>, org.ocpsoft.rewrite.servlet.impl.DefaultRewriteLifecycleListener<2147483647>]]]
+
+[2017-01-14T19:56:16.952+0100] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=53 _ThreadName=admin-listener(3)] [timeMillis: 1484420176952] [levelValue: 800] [[
+  Loaded [1] org.ocpsoft.rewrite.servlet.spi.RequestCycleWrapper [org.ocpsoft.rewrite.servlet.impl.HttpRewriteRequestCycleWrapper<0>]]]
+
+[2017-01-14T19:56:16.952+0100] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=53 _ThreadName=admin-listener(3)] [timeMillis: 1484420176952] [levelValue: 800] [[
+  Loaded [1] org.ocpsoft.rewrite.spi.RewriteProvider [org.ocpsoft.rewrite.servlet.impl.DefaultHttpRewriteProvider<0>]]]
+
+[2017-01-14T19:56:16.953+0100] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=53 _ThreadName=admin-listener(3)] [timeMillis: 1484420176953] [levelValue: 800] [[
+  Loaded [1] org.ocpsoft.rewrite.servlet.spi.RewriteResultHandler [org.ocpsoft.rewrite.servlet.impl.HttpRewriteResultHandler<0>]]]
+
+[2017-01-14T19:56:16.953+0100] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=53 _ThreadName=admin-listener(3)] [timeMillis: 1484420176953] [levelValue: 800] [[
+  Loaded [1] org.ocpsoft.rewrite.servlet.spi.InboundRewriteProducer [org.ocpsoft.rewrite.servlet.impl.HttpInboundRewriteProducer<0>]]]
+
+[2017-01-14T19:56:16.953+0100] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=53 _ThreadName=admin-listener(3)] [timeMillis: 1484420176953] [levelValue: 800] [[
+  Loaded [1] org.ocpsoft.rewrite.servlet.spi.OutboundRewriteProducer [org.ocpsoft.rewrite.servlet.impl.HttpOutboundRewriteProducer<0>]]]
+
+[2017-01-14T19:56:16.954+0100] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=53 _ThreadName=admin-listener(3)] [timeMillis: 1484420176954] [levelValue: 800] [[
+  Loaded [1] org.ocpsoft.rewrite.servlet.spi.ContextListener [org.ocpsoft.rewrite.prettyfaces.PrettyConfigContextListener<0>]]]
+
+[2017-01-14T19:56:16.955+0100] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=53 _ThreadName=admin-listener(3)] [timeMillis: 1484420176955] [levelValue: 800] [[
+  Loaded [0] org.ocpsoft.rewrite.servlet.spi.RequestListener []]]
+
+[2017-01-14T19:56:16.957+0100] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=53 _ThreadName=admin-listener(3)] [timeMillis: 1484420176957] [levelValue: 800] [[
+  Loaded [1] org.ocpsoft.rewrite.servlet.spi.RequestParameterProvider [org.ocpsoft.rewrite.prettyfaces.PrettyFacesRequestParameterProvider<0>]]]
+
+[2017-01-14T19:56:16.963+0100] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=53 _ThreadName=admin-listener(3)] [timeMillis: 1484420176963] [levelValue: 800] [[
+  Loaded [1] org.ocpsoft.rewrite.el.spi.ExpressionLanguageProvider [org.ocpsoft.rewrite.faces.FacesExpressionLanguageProvider<30>]]]
+
+[2017-01-14T19:56:16.968+0100] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=53 _ThreadName=admin-listener(3)] [timeMillis: 1484420176968] [levelValue: 800] [[
+  Loaded [1] org.ocpsoft.rewrite.spi.InvocationResultHandler [org.ocpsoft.rewrite.faces.NavigatingInvocationResultHandler<100>]]]
+
+[2017-01-14T19:56:16.969+0100] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=53 _ThreadName=admin-listener(3)] [timeMillis: 1484420176969] [levelValue: 800] [[
+  Loaded [0] org.ocpsoft.common.spi.ServiceEnricher []]]
+
+[2017-01-14T19:56:16.976+0100] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=53 _ThreadName=admin-listener(3)] [timeMillis: 1484420176976] [levelValue: 800] [[
+  Loaded [1] org.ocpsoft.rewrite.spi.ConfigurationCacheProvider [org.ocpsoft.rewrite.servlet.impl.ServletContextConfigurationCacheProvider<0>]]]
+
+[2017-01-14T19:56:16.985+0100] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=53 _ThreadName=admin-listener(3)] [timeMillis: 1484420176985] [levelValue: 800] [[
+  Loaded [2] org.ocpsoft.rewrite.config.ConfigurationProvider [org.ocpsoft.rewrite.annotation.config.AnnotationConfigProvider<100>, org.ocpsoft.rewrite.prettyfaces.PrettyFacesRewriteConfigurationProvider<1>]]]
+
+[2017-01-14T19:56:16.996+0100] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=53 _ThreadName=admin-listener(3)] [timeMillis: 1484420176996] [levelValue: 800] [[
+  Loaded [0] org.ocpsoft.rewrite.spi.RuleCacheProvider []]]
+
+[2017-01-14T19:56:17.023+0100] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=53 _ThreadName=admin-listener(3)] [timeMillis: 1484420177023] [levelValue: 800] [[
+  Loaded [1] org.ocpsoft.rewrite.spi.GlobalParameterProvider [org.ocpsoft.rewrite.instance.WildcardParameterProvider<0>]]]
+
+[2017-01-14T19:56:17.136+0100] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=53 _ThreadName=admin-listener(3)] [timeMillis: 1484420177136] [levelValue: 800] [[
+  Rewrite 3.4.1.Final initialized.]]
+
+[2017-01-14T19:56:17.139+0100] [glassfish 4.1] [INFO] [AS-WEB-GLUE-00172] [javax.enterprise.web] [tid: _ThreadID=53 _ThreadName=admin-listener(3)] [timeMillis: 1484420177139] [levelValue: 800] [[
+  Loading application [SzpitalUsers] at [/SzpitalUsers]]]
+
+[2017-01-14T19:56:17.259+0100] [glassfish 4.1] [INFO] [] [javax.enterprise.system.core] [tid: _ThreadID=53 _ThreadName=admin-listener(3)] [timeMillis: 1484420177259] [levelValue: 800] [[
+  SzpitalUsers was successfully deployed in 17 062 milliseconds.]]
+
+[2017-01-14T19:56:17.653+0100] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=37 _ThreadName=http-listener-1(1)] [timeMillis: 1484420177653] [levelValue: 800] [[
+  Loaded [1] org.ocpsoft.rewrite.spi.GlobalParameterProvider [org.ocpsoft.rewrite.instance.WildcardParameterProvider<0>]]]
+
+[2017-01-14T19:57:57.918+0100] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=51 _ThreadName=admin-listener(1)] [timeMillis: 1484420277918] [levelValue: 800] [[
+  RewriteFilter shutting down...]]
+
+[2017-01-14T19:57:57.918+0100] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=51 _ThreadName=admin-listener(1)] [timeMillis: 1484420277918] [levelValue: 800] [[
+  RewriteFilter deactivated.]]
+
+[2017-01-14T19:57:57.961+0100] [glassfish 4.1] [INFO] [] [org.eclipse.persistence.session.file:/E:/SzpitalUsers/glassfish4/glassfish/domains/domain1/applications/SzpitalUsers/WEB-INF/classes/_medsystem.connection] [tid: _ThreadID=51 _ThreadName=admin-listener(1)] [timeMillis: 1484420277961] [levelValue: 800] [[
+  file:/E:/SzpitalUsers/glassfish4/glassfish/domains/domain1/applications/SzpitalUsers/WEB-INF/classes/_medsystem logout successful]]
+
+[2017-01-14T19:57:57.972+0100] [glassfish 4.1] [WARNING] [] [javax.enterprise.web.util] [tid: _ThreadID=51 _ThreadName=admin-listener(1)] [timeMillis: 1484420277972] [levelValue: 900] [[
+  The web application [/SzpitalUsers] registered the JDBC driver [org.postgresql.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.]]
+
+[2017-01-14T19:58:26.764+0100] [glassfish 4.1] [INFO] [] [org.glassfish.jersey.server.ApplicationHandler] [tid: _ThreadID=54 _ThreadName=admin-listener(4)] [timeMillis: 1484420306764] [levelValue: 800] [[
+  Initiating Jersey application, version Jersey: 2.10.4 2014-08-08 15:09:00...]]
+
+[2017-01-14T19:58:27.068+0100] [glassfish 4.1] [INFO] [NCLS-REST-00001] [javax.enterprise.admin.rest] [tid: _ThreadID=54 _ThreadName=admin-listener(4)] [timeMillis: 1484420307068] [levelValue: 800] [[
+  Listening to REST requests at context: /command/domain.]]
+
+[2017-01-14T19:58:27.172+0100] [glassfish 4.1] [INFO] [NCLS-CORE-00092] [javax.enterprise.system.core] [tid: _ThreadID=142 _ThreadName=Thread-31] [timeMillis: 1484420307172] [levelValue: 800] [[
+  Server shutdown initiated]]
+
+[2017-01-14T19:58:27.184+0100] [glassfish 4.1] [INFO] [NCLS-BOOTSTRAP-00028] [javax.enterprise.bootstrap] [tid: _ThreadID=142 _ThreadName=Thread-31] [timeMillis: 1484420307184] [levelValue: 800] [[
+  Unregistered com.sun.enterprise.glassfish.bootstrap.osgi.EmbeddedOSGiGlassFishImpl@4422dd48 from service registry.]]
+
+[2017-01-14T19:58:27.190+0100] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=142 _ThreadName=Thread-8] [timeMillis: 1484420307190] [levelValue: 800] [[
+  FileMonitoring shutdown]]
+
+[2017-01-14T19:58:27.226+0100] [glassfish 4.1] [INFO] [NCLS-JMX-00002] [javax.enterprise.system.jmx] [tid: _ThreadID=142 _ThreadName=Thread-31] [timeMillis: 1484420307226] [levelValue: 800] [[
+  JMXStartupService: Stopped JMXConnectorServer: null]]
+
+[2017-01-14T19:58:27.227+0100] [glassfish 4.1] [INFO] [NCLS-JMX-00001] [javax.enterprise.system.jmx] [tid: _ThreadID=142 _ThreadName=Thread-31] [timeMillis: 1484420307227] [levelValue: 800] [[
+  JMXStartupService and JMXConnectors have been shut down.]]
+
+[2017-01-14T19:58:27.274+0100] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=149 _ThreadName=Thread-8] [timeMillis: 1484420307274] [levelValue: 800] [[
+  JdbcRuntimeExtension,  getAllSystemRAResourcesAndPools = [GlassFishConfigBean.org.glassfish.jdbc.config.JdbcResource, GlassFishConfigBean.org.glassfish.jdbc.config.JdbcConnectionPool, GlassFishConfigBean.org.glassfish.jdbc.config.JdbcConnectionPool, GlassFishConfigBean.org.glassfish.jdbc.config.JdbcResource]]]
+
+[2017-01-14T19:58:27.282+0100] [glassfish 4.1] [INFO] [ra.stop-successful] [javax.enterprise.resource.resourceadapter.com.sun.enterprise.connectors.service] [tid: _ThreadID=153 _ThreadName=Thread-41] [timeMillis: 1484420307282] [levelValue: 800] [[
+  RAR7094: __xa_jdbc_ra shutdown successful.]]
+
